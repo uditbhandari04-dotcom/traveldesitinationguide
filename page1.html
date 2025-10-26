@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NullSet | With Family</title>
+    <style>
+        .head{height: 100px;}
+        nav{position: sticky;
+            top: 1px;
+            height: 70px;
+            border: 1px solid burlywood;
+            border-radius: 20px;
+           background-image: url('https://i.pinimg.com/1200x/54/c6/a8/54c6a87cdc79e7c553a06419e6b30b28.jpg');}
+        .body1{margin: 0%;position: relative;height: 300px;}
+        .body1 img{position: absolute;height: 300px;top: 10px;border-radius: 5px;} .body1 img:hover{height: 310px;border-radius: 10px;transition-duration: 0.9s;}
+        .body1 h1{color: brown;}
+        #h1{position: absolute;left: 330px;top: 40px;}
+        #h2{position: absolute;left: 430px;top: 80px;}
+        .body1 p{position: absolute;top: 150px;left: 250px;font-size: 13px;}
+        .body2{position: relative;height: 220px;border-top: 0.5px darkgreen solid; ;margin-top: 20px;}
+        .body2 img{height: 250px;position: absolute;right: 30px;border-radius: 5px;top: 5px;}
+        .body2 h1{position: absolute;left: 45px;top: 30px;color: darkolivegreen;}
+        .body2 p{position: absolute;left: 25px;top: 85px;width: 50%;font-size: 13px;color: darkgreen;}
+        .body3 {position: relative;}
+        #a-img1{position: absolute;height: 250px;top: 50px;left: 10px;} #a-img1:hover{height: 260px;transition-duration: 0.9s;}
+        #a-img-h1{position: absolute;z-index: 1;top: 230px;left: 35px;color: white;}
+        #a-img-h1:hover{color: black;transition-duration: 0.9s;}
+        #a-img2{position: absolute;top: 50px;height: 250px;left: 200px;border-radius: 5px;} #a-img2:hover{height: 260px;transition-duration: 0.9s;}
+        #a-img-h2{position: absolute;z-index: 1;top: 50px;left: 235px;color: white} #a-img-h2:hover{color: black;transition-duration: 0.9s;}
+        #a-img3{position: absolute;top: 50px;height: 250px;left: 390px;border-radius: 5px;} #a-img3:hover{height: 260px;transition-duration: 0.9s;}
+        #a-img-h3{position: absolute;z-index: 1;top: 230px;left: 430px;color: white} #a-img-h3:hover{color: black;transition-duration: 0.9s;}
+        #a-img4{position: absolute;top: 50px;height: 250px;left: 590px;border-radius: 5px;} #a-img4:hover{height: 260px;transition-duration: 0.9s;}
+        #a-img-h4{position: absolute;z-index: 1;top: 50px;left: 595px;color: white} #a-img-h4:hover{color: black;transition-duration: 0.9s;}
+        .body4{position: relative;height: 220px;border-top: 0.5px solid rgb(169, 65, 65); ;margin-top: 20px;} .body5 {position: relative;}
+        
+        .body4 img{height: 250px;position: absolute;right: 30px;border-radius: 5px;top: 5px;}
+        .body4 h1{position: absolute;left: 45px;top: 30px;color: rgb(169, 65, 65)}
+        .body4 p{position: absolute;left: 25px;top: 85px;width: 50%;font-size: 13px;color: burlywood;}
+        #r-img1{position: absolute;height: 250px;top: 50px;left: 10px;border-radius: 5px;} #r-img1:hover{height: 260px;transition-duration: 0.9s;}
+        #r-img-h1{position: absolute;z-index: 1;top: 50px;left: 55px;color: white;}
+        #r-img-h1:hover{color: black;transition-duration: 0.9s;}
+        #r-img2{position: absolute;top: 50px;height: 250px;left: 200px;border-radius: 5px;} #r-img2:hover{height: 260px;transition-duration: 0.9s;}
+        #r-img-h2{position: absolute;z-index: 1;top: 230px;left: 245px;color: white} #r-img-h2:hover{color: black;transition-duration: 0.9s;}
+        #r-img3{position: absolute;top: 50px;height: 250px;left: 390px;border-radius: 5px;} #r-img3:hover{height: 260px;transition-duration: 0.9s;}
+        #r-img-h3{position: absolute;z-index: 1;top: 50px;left: 430px;color: white} #r-img-h3:hover{color: black;transition-duration: 0.9s;}
+        #r-img4{position: absolute;top: 50px;height: 250px;left: 590px;border-radius: 5px;} #r-img4:hover{height: 260px;transition-duration: 0.9s;}
+        #r-img-h4{position: absolute;z-index: 1;top: 230px;left: 615px;color: white} #r-img-h4:hover{color: black;transition-duration: 0.9s;}
+        .body6{position: relative;height: 220px;border-top: 0.5px solid goldenrod; ;margin-top: 20px;} .body7 {position: relative;}
+        .body6 img{height: 250px;position: absolute;right: 30px;border-radius: 5px;top: 5px;}
+        .body6 h1{position: absolute;left: 10px;top: 30px;color: goldenrod}
+        .body6 p{position: absolute;left: 25px;top: 85px;width: 50%;font-size: 13px;color: gray;}
+        #t-img1{position: absolute;height: 250px;top: 50px;left: 10px;border-radius: 5px;} #t-img1:hover{height: 260px;transition-duration: 0.9s;}
+        #t-img-h1{position: absolute;z-index: 1;top: 230px;left: 41px;color: white;}
+        #t-img-h1:hover{color: gold;transition-duration: 0.9s;}
+        #t-img2{position: absolute;top: 50px;height: 250px;left: 200px;border-radius: 5px;} #t-img2:hover{height: 260px;transition-duration: 0.9s;}
+        #t-img-h2{position: absolute;z-index: 1;top: 50px;left: 237px;color: white} #t-img-h2:hover{color: navy;transition-duration: 0.9s;}
+        #t-img3{position: absolute;top: 50px;height: 250px;left: 390px;border-radius: 5px;} #t-img3:hover{height: 260px;transition-duration: 0.9s;}
+        #t-img-h3{position: absolute;z-index: 1;top: 230px;left: 393px;color: white} #t-img-h3:hover{color: rgb(98, 4, 4);transition-duration: 0.9s;}
+        #t-img4{position: absolute;top: 50px;height: 250px;left: 590px;border-radius: 5px;} #t-img4:hover{height: 260px;transition-duration: 0.9s;}
+        #t-img-h4{position: absolute;z-index: 1;top: 50px;left: 616px;color: white} #t-img-h4:hover{color: goldenrod;transition-duration: 0.9s;}
+        
+            
+
+        
+    </style>
+</head>
+<body>
+<div class="head">
+    <nav>
+       <a id="Heading1" style="font-weight: lighter;color: rgb(98, 4, 4);position: absolute; left: 20px;text-decoration: unset;font-size: 32px;top: 17px;" href="index.html" >NullSet</a>
+       <p style="position: absolute;left: 300px;top: 7px ;font-size: 20px ;color: rgb(70, 69, 69);font-family: 'Courier New', Courier, monospace;">With Family</p>
+    </nav>
+</div>
+<div class="body1">
+    <img src="https://i.pinimg.com/736x/ee/0b/21/ee0b21366fd1d668755d1e8cc78d2629.jpg" alt="" >
+    <h1 id="h1">Top Picks For</h1>
+    <h1 id="h2"> Family Trips</h1>
+    <p>Discover places where fun, comfort, and togetherness meet. Perfect spots for all ages to relax and explore.</p>
+    
+</div>
+<div class="body2">
+    <img src="https://i.pinimg.com/1200x/db/dd/8e/dbdd8e92d6ae678cd823491d7e657bd6.jpg" alt="">
+    <h1>Adventure with Family</h1>
+    <p>Exploring new places with your loved ones can be both thrilling and memorable! India offers a wide range of family-friendly adventures that cater to all ages—from kids to grandparents. Whether it’s snow-filled fun in the mountains of Manali, gentle rafting along the Ganga in Rishikesh, beach and marine adventures in the Andaman Islands, or a magical desert safari in Jaisalmer, there’s something for every family. These destinations combine excitement, safety, and beautiful experiences, making every trip a perfect blend of adventure and togetherness.</p>
+</div>
+<div class="body3" style="height: 330px; margin-top: 20px; border-bottom: 0.5px darkgreen solid;">
+    <a href="https://share.google/02EzPxvQXC2AIajdO"><img id="a-img1" style="border-radius: 5px;" src="https://i.pinimg.com/736x/bc/87/15/bc87159bf3b505ab9e0b97a46ce487ae.jpg" alt=""></a>
+    <a href="https://share.google/02EzPxvQXC2AIajdO"><h3 id="a-img-h1">Rishikesh</h3></a>
+    <a href="https://share.google/Esbv9yOqACqVxhhAe"><img id="a-img2" src="https://i.pinimg.com/736x/7b/a9/a2/7ba9a2118bcee69dfcdd0015c109d3fe.jpg" alt=""></a>
+    <a href="https://share.google/Esbv9yOqACqVxhhAe"><h3 id="a-img-h2">Jaisalmer</h3></a>
+    <a href="https://share.google/IzladQ89JuGgGymBD"><img id="a-img3" src="https://i.pinimg.com/1200x/e9/a9/fb/e9a9fb6443a26f780bc9a5618922a860.jpg" alt=""></a>
+    <a href="https://share.google/IzladQ89JuGgGymBD"><h3 id="a-img-h3">Manali</h3></a>
+    <a href="https://share.google/rHTfUkucKmgfjJqM3"><img id="a-img4" src="https://i.pinimg.com/736x/88/50/1e/88501e167ecb4bb56c786c63ed50e7e5.jpg" alt=""></a>
+    <a href="https://share.google/rHTfUkucKmgfjJqM3"><h4 id="a-img-h4">Andaman-Nicobar</h4></a>
+</div>
+<div class="body4">
+    <img src="https://i.pinimg.com/736x/49/9f/18/499f18c519a1d9b90d0db9eee3f9dcb0.jpg" alt="">
+    <h1>Relaxation & Wellness</h1>
+    <p>Travel is not just about adventure—it's also about recharging your mind and body. India is home to serene destinations perfect for family relaxation and wellness. From peaceful yoga retreats in Rishikesh to tranquil hill station resorts in Coorg and rejuvenating spa experiences in Kerala, families can unwind amidst nature and calm surroundings. These destinations offer a perfect blend of comfort, scenic beauty, and wellness activities, ensuring that every member of the family returns home refreshed and revitalized.</p>
+</div>
+<div class="body5" style="height: 330px; margin-top: 20px; border-bottom: 0.5px solid rgb(98, 4, 4);">
+    <a href="https://share.google/Zg4Hb04ACV4Y4yHkt"><img id="r-img1" src="https://i.pinimg.com/736x/6b/ea/43/6bea432d096c15dd3017ffafb1519348.jpg" alt=""></a>
+    <a href="https://share.google/Zg4Hb04ACV4Y4yHkt"><h3 id="r-img-h1">Coorg</h3></a>
+    <a href="https://share.google/wwT4i7mL037VqRAkc"><img id="r-img2" src="https://i.pinimg.com/736x/a1/01/ad/a101adeac9f2062d0a25a5806a902b34.jpg" alt=""></a>
+    <a href="https://share.google/wwT4i7mL037VqRAkc"><h3 id="r-img-h2">Kerala</h3></a>
+    <a href="https://share.google/h9PwXtUmNLM3E1OO0"><img id="r-img3" src="https://i.pinimg.com/736x/7f/23/5c/7f235c82968946fc9cd8b1ece8678639.jpg" alt=""></a>
+    <a href="https://share.google/h9PwXtUmNLM3E1OO0"><h3 id="r-img-h3">Shimla</h3></a>
+    <a href="https://share.google/ReH4WaBoweisVC9cj"><img id="r-img4" src="https://i.pinimg.com/736x/17/d2/13/17d213cd2dbe25b0f1dc050ce2779859.jpg" alt=""></a>
+    <a href="https://share.google/ReH4WaBoweisVC9cj"><h3 id="r-img-h4">Mount Abu</h3></a>
+</div>
+<div class="body6">
+    <img src="https://i.pinimg.com/1200x/e6/c6/25/e6c625de6b870af2a2400e47dc8f3b25.jpg" alt="">
+    <h1>Temples & Spiritual Journeys</h1>
+    <p>India's spiritual essence shines through its ancient temples and sacred sites, offering peace, devotion, and a glimpse into the country's timeless traditions. Visiting these holy places is not just a religious experience but also a cultural journey for the entire family. From the architectural marvels of the South to the spiritual ghats of the North, every temple tells a story of faith, art, and history. These destinations let families connect with India's divine side while enjoying serene surroundings and cultural beauty.</p>
+</div>
+<div class="body7" style="height: 330px; margin-top: 20px; border-bottom: 0.5px solid goldenrod;">
+    <a href="https://share.google/flrsaNy9Wxrnn1zuZ"><img id="t-img1" src="https://i.pinimg.com/736x/46/59/43/465943508476a6919412bfa57a01bbcc.jpg" alt=""></a>
+    <a href="https://share.google/flrsaNy9Wxrnn1zuZ"><h3 id="t-img-h1">Ayodhya</h3></a>
+    <a href="https://share.google/7b1RA5dj2kLt08IzF"><img id="t-img2" src="https://i.pinimg.com/736x/1e/5c/5c/1e5c5cc1e5de68b55fb55707e534733c.jpg" alt=""></a>
+    <a href="https://share.google/7b1RA5dj2kLt08IzF"><h3 id="t-img-h2">Dwarka</h3></a>
+    <a href="https://share.google/ohv5psbZmw1jHiCvH"><img id="t-img3" src="https://i.pinimg.com/736x/7d/45/6d/7d456d0933321416f97a4f93235795f4.jpg" alt=""></a>
+    <a href="https://share.google/ohv5psbZmw1jHiCvH"><h3 id="t-img-h3">Tirupati Balaji</h3></a>
+    <a href="https://share.google/Q3kKdD0I2aCx8jMiD"><img id="t-img4" src="https://i.pinimg.com/736x/a1/f0/27/a1f027e11ae0a44484d2cfb42808ae78.jpg" alt=""></a>
+    <a href="https://share.google/Q3kKdD0I2aCx8jMiD"><h3 id="t-img-h4">Kedarnath</h3></a>
+</div>
+<br>
+<footer style="border-top: 1px double black;background-color: whitesmoke;">
+    <p style="font-size: 8px;color: grey;text-align: center;">Made By Udit Bhandari :) </p>
+    <p style="font-size: 8px;color: grey;text-align: center;">Made with ❤️ and care — apologies for any little mistakes along the way!</p>
+    <p style="font-size: 8px;color: grey;text-align: center;">SnW Project - Travel Destination Guide </p>
+    <p style="font-size: 8px;color: grey;text-align: center;">NullSet - By UB ©️</p>
+</footer>
+</body>
+</html>
